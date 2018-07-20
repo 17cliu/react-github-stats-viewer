@@ -6,7 +6,7 @@ import rootReducer from './reducers';
 
 // initial state of application.
 const defaultState = {
-    displayName: '--',
+    user: {},
     username: '17cliu'
 };
 

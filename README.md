@@ -9,3 +9,9 @@ View a GitHub user's stats. A project built to learn more about React.
 1. `npm install` to grab all necessary dependencies.
 2. `npm start` to compile & start application; site served at <localhost:3000>.
 3. `npm test` to run unit tests.
+
+## Roadmap
+
+- https://developer.github.com/v3/users
+- show stats: repos, followers, stars
+- show activity map

@@ -21,8 +21,8 @@ function users (state = {}, action) {
     switch (action.type) {
         case SEARCH:
             return {
-                displayName: action.payload.data.name,
-                username: action.payload.data.login
+                username: action.payload.data.login,
+                user: action.payload.data
             };
         default:
             // didn't have to do anything for this action; return unchanged state.
