@@ -2,6 +2,13 @@
   "name": "github-stats-viewer",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "lint": "eslint ./ --ext .js --ext .jsx",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.4.1",
@@ -11,10 +18,13 @@
     "redux": "^4.0.0",
     "redux-promise": "^0.6.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-standard": "^3.1.0"
   }
 }

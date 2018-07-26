@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.css'
+import './Main.css';
 import RepositoryList from './RepositoryList';
 
 class Main extends React.Component {
@@ -33,7 +33,7 @@ class Main extends React.Component {
                 </div>
                 <RepositoryList repositories={this.props.repositories} />
             </div>
-        )
+        );
     }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 function RepositoryListItem (props) {
     return (
-        <li><a href={props.repo.html_url}>{props.repo.name}</a></li>
+        <li key={props.repo.id}><a href={props.repo.html_url}>{props.repo.name}</a></li>
     );
 }
 
@@ -15,7 +15,7 @@ function RepositoryList (props) {
         <ul className="repository-list">
             {repositories.map(r => <RepositoryListItem repo={r} />)}
         </ul>
-    )
+    );
 }
 
 export default RepositoryList;

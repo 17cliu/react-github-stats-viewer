@@ -26,7 +26,7 @@ export function getUserInfo (username) {
     return {
         type: GET_USER,
         payload: req
-    }
+    };
 }
 
 export function listUserRepositories (username) {
@@ -35,7 +35,7 @@ export function listUserRepositories (username) {
     return {
         type: LIST_REPOSITORIES,
         payload: req
-    }
+    };
 }
 
 export async function search (username) {
@@ -47,5 +47,5 @@ export async function search (username) {
     return {
         type: SEARCH,
         payload: req
-    }
+    };
 }

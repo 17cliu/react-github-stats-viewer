@@ -3,7 +3,7 @@
 
 // import { combineReducers } from 'redux';
 
-import { SEARCH, LIST_REPOSITORIES } from '../actions'
+import { SEARCH, LIST_REPOSITORIES } from '../actions';
 
 // a reducer takes in two things:
 // 1. the action (info about what happened); and
@@ -19,23 +19,23 @@ import { SEARCH, LIST_REPOSITORIES } from '../actions'
 // this is our `users` reducer:
 function users (state = {}, action) {
     switch (action.type) {
-        case SEARCH:
-            const user = action.payload[0].data;
-            const repos = action.payload[1].data;
+    case SEARCH:
+        const user = action.payload[0].data;
+        const repos = action.payload[1].data;
 
-            const result = {
-                ...state,
-                username: user.login,
-                user,
-                repositories: repos
-            };
+        const result = {
+            ...state,
+            username: user.login,
+            user,
+            repositories: repos
+        };
 
-            console.log ('a', result);
-            return result;
-        case LIST_REPOSITORIES:
-        default:
-            // didn't have to do anything for this action; return unchanged state.
-            return state;
+        console.log('a', result);
+        return result;
+    case LIST_REPOSITORIES:
+    default:
+        // didn't have to do anything for this action; return unchanged state.
+        return state;
     }
 }
 

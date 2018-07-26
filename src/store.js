@@ -20,7 +20,7 @@ const enhancers = compose(
     applyMiddleware(ReduxPromise),
     // if redux dev tool extension exists, enable it. this will allow us to
     // inspect the store and time travel.
-    window.devToolsExtension ? window.devToolsExtension() : (f) => f,
+    window.devToolsExtension ? window.devToolsExtension() : (f) => f
 );
 
 // create store. we'll pass it to the application provider in `index.js`.
