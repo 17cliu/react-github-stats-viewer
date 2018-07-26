@@ -1,10 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function RepositoryListItem (props) {
     return (
-        <li key={props.repo.id}><a href={props.repo.html_url}>{props.repo.name}</a></li>
+        <li><a href={props.repo.html_url}>{props.repo.name}</a></li>
     );
 }
+
+RepositoryListItem.propTypes = {
+    repo: PropTypes.object
+};
 
 function RepositoryList (props) {
     const { repositories } = props;
@@ -13,9 +18,13 @@ function RepositoryList (props) {
 
     return (
         <ul className="repository-list">
-            {repositories.map(r => <RepositoryListItem repo={r} />)}
+            {repositories.map(r => <RepositoryListItem key={r.id} repo={r} />)}
         </ul>
     );
 }
+
+RepositoryList.propTypes = {
+    repositories: PropTypes.array
+};
 
 export default RepositoryList;

@@ -4,14 +4,13 @@ module.exports = {
     root: true,
     parser: 'babel-eslint',
     parserOptions: {
-        // sourceType: 'module',
         ecmaFeatures: {
-            jsx: true,
-        //     modules: true
+            jsx: true
         }
     },
     env: {
-        browser: true
+        browser: true,
+        jest: true
     },
     extends: [
         'standard',
