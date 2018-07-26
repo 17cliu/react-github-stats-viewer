@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.css'
+import RepositoryList from './RepositoryList';
 
 class Main extends React.Component {
     constructor () {
@@ -30,6 +31,7 @@ class Main extends React.Component {
                     <h1 className="user-title">{this.props.username}</h1>
                     {displayNameHtml}
                 </div>
+                <RepositoryList repositories={this.props.repositories} />
             </div>
         )
     }
