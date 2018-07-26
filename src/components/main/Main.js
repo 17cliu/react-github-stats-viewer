@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import UserCard from './UserCard';
+import Languages from './Languages';
 import RepositoryList from './RepositoryList';
 import './Main.css';
 
@@ -28,7 +30,7 @@ class Main extends React.Component {
         this.userFormRef.current.reset();
     }
     render () {
-        const displayNameHtml = this.props.user.name ? <p className="user-name">{this.props.user.name}</p> : '';
+        const { user, repositories, languages } = this.props;
 
         return (
             <div className="page">
@@ -36,12 +38,10 @@ class Main extends React.Component {
                     <input type="text" ref={this.usernameRef} placeholder="username" />
                     <input type="submit" value="Go" />
                 </form>
-                <div className="user">
-                    <img src={this.props.user.avatar_url} alt="user avatar" width="100" />
-                    <h1 className="user-title">{this.props.username}</h1>
-                    {displayNameHtml}
-                </div>
-                <RepositoryList repositories={this.props.repositories} />
+
+                <UserCard user={user} username={this.props.username} />
+                {languages ? <Languages languages={languages} /> : null}
+                <RepositoryList repositories={repositories} />
             </div>
         );
     }
@@ -51,6 +51,7 @@ Main.propTypes = {
     username: PropTypes.string,
     user: PropTypes.object,
     repositories: PropTypes.array,
+    languages: PropTypes.object,
 
     // actions that are used by this component
     search: PropTypes.func
